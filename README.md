@@ -1,5 +1,3 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0%3A03142b%2C100%3A00b4d8&height=180&section=header&text=Ahmet%20B%C3%96L%C3%9CKO%C4%9ELU&fontSize=48&fontColor=d8f3ff&desc=Senior%20Software%20Engineer%20%7C%20Full-Stack%20%26%20System%20Architect&descAlignY=72" width="100%" alt="Ahmet BÖLÜKOĞLU">
-
 <div align="center">
 
 <img src="https://img.shields.io/badge/TypeScript-00b4d8?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
