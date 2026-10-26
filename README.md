@@ -31,8 +31,8 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ahmetbolukoglu&show_icons=true&theme=merko&hide_border=true" alt="GitHub stats">
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmetbolukoglu&layout=compact&theme=merko&hide_border=true" alt="Top languages">
+<img height="165" width="100%" src="https://github-readme-stats.vercel.app/api?username=ahmetbolukoglu&show_icons=true&theme=merko&hide_border=true" alt="GitHub stats">
+<img height="165" width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmetbolukoglu&layout=compact&theme=merko&hide_border=true" alt="Top languages">
 
 <img src="https://streak-stats.demolab.com?user=ahmetbolukoglu&theme=merko&hide_border=true" alt="GitHub streak">
 
