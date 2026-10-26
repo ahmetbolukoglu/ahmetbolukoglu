@@ -31,9 +31,9 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=ahmetbolukoglu&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats">
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmetbolukoglu&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages">
+<img width="49%" align="top" src="https://github-readme-stats.vercel.app/api?username=ahmetbolukoglu&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub stats">
+<img width="49%" align="top" src="https://streak-stats.demolab.com?user=ahmetbolukoglu&theme=tokyonight&hide_border=true&card_width=467&card_height=195" alt="GitHub streak">
 
-<img src="https://streak-stats.demolab.com?user=ahmetbolukoglu&theme=tokyonight&hide_border=true" alt="GitHub streak">
+<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ahmetbolukoglu&layout=compact&langs_count=20&card_width=1000&theme=tokyonight&hide_border=true" alt="Top languages">
 
 </div>
