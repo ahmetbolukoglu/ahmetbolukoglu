@@ -17,7 +17,7 @@
 <img src="https://img.shields.io/badge/Git-ff7b54?style=for-the-badge&logo=git&logoColor=white" alt="Git">
 
 </div>
-
+<p><strong>10 yılı aşkın</strong> süredir kurumsal ve freelance projelerde <strong>.NET Core, C#</strong> ve <strong>mikroservis</strong> mimarileriyle performanslı, ölçeklenebilir ve sürdürülebilir sistemler geliştiriyorum. Son dönemde yapay zekâ, agentic sistemler ve <strong>MCP</strong> ile çalışıyorum.</p>
 
 ## 🌇 Games & projects
 
