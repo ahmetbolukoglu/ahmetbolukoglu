@@ -144,6 +144,7 @@ export async function fetchStats(login, token) {
         pullRequests { totalCount }
         issues { totalCount }
         contributionsCollection { contributionYears }
+        allPublic: repositories(ownerAffiliations: OWNER, privacy: PUBLIC) { totalCount }
         repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false, first: 100, after: $after) {
           totalCount
           pageInfo { hasNextPage endCursor }
@@ -165,6 +166,8 @@ export async function fetchStats(login, token) {
   const days = []
   let totalContributions = 0
   let totalCommits = 0
+  let lastYearContributions = 0
+  const currentYear = String(new Date().getUTCFullYear())
   for (const year of years) {
     const from = `${year}-01-01T00:00:00Z`
     const to = `${year}-12-31T23:59:59Z`
@@ -182,6 +185,7 @@ export async function fetchStats(login, token) {
     }`, { login, from, to }, token)
     const c = data.user.contributionsCollection
     totalContributions += c.contributionCalendar.totalContributions
+    if (String(year) === currentYear) lastYearContributions = c.contributionCalendar.totalContributions
     totalCommits += c.totalCommitContributions + c.restrictedContributionsCount
     for (const w of c.contributionCalendar.weeks) days.push(...w.contributionDays)
   }
@@ -198,7 +202,12 @@ export async function fetchStats(login, token) {
   return {
     login,
     stars: repos.reduce((a, r) => a + r.stargazerCount, 0),
-    publicRepos: user.repositories.totalCount,
+    // Same number the profile page shows (forks included); stars and
+    // languages below only count the user's own, non-fork repositories.
+    publicRepos: user.allPublic.totalCount,
+    contributionsThisYear: lastYearContributions,
+    currentYear,
+    activeYears: years.length,
     followers: user.followers.totalCount,
     pullRequests: user.pullRequests.totalCount,
     issues: user.issues.totalCount,
@@ -252,14 +261,18 @@ const range = (s) => (s.length ? `${shortDate(s.start)} – ${shortDate(s.end)}`
 
 export function statsSvg(s) {
   const width = 495
+  // Show the first six figures that are not zero, so the card never
+  // advertises empty numbers; the card keeps a fixed height either way.
   const rows = [
-    ['Total stars', s.stars],
     ['Total commits', s.totalCommits],
+    [`Contributions in ${s.currentYear}`, s.contributionsThisYear],
+    ['Public repositories', s.publicRepos],
+    ['Total stars', s.stars],
     ['Pull requests', s.pullRequests],
     ['Issues', s.issues],
-    ['Public repositories', s.publicRepos],
+    ['Years active on GitHub', s.activeYears],
     ['Followers', s.followers],
-  ]
+  ].filter(([, value]) => Number(value) > 0).slice(0, 6)
   const body = [`<text x="25" y="36" font-family="${FONT}" font-size="18" font-weight="700" fill="${THEME.title}">GitHub stats</text>`]
   rows.forEach(([label, value], i) => {
     const y = 72 + i * 25
@@ -343,7 +356,8 @@ function mockStats() {
     days.push({ date, contributionCount: i > 282 ? 3 : (i % 7 === 0 ? 0 : 1) })
   }
   return {
-    login: LOGIN, stars: 12, publicRepos: 26, followers: 2, pullRequests: 9, issues: 3,
+    login: LOGIN, stars: 12, publicRepos: 26, followers: 2, pullRequests: 0, issues: 0,
+    contributionsThisYear: 300, currentYear: '2026', activeYears: 8,
     totalCommits: 980, totalContributions: 1040, firstYear: 2019, days,
     languages: [
       { name: 'JavaScript', size: 500000, color: '#f1e05a' },
