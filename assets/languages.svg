@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="118" viewBox="0 0 1000 118" role="img" aria-label="Most used languages">
+<title>Most used languages</title>
+<rect x="0.5" y="0.5" width="999" height="117" rx="10" fill="#1a1b27" stroke="#2a2d3e"/>
+<text x="25" y="36" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#70a5fd">Most used languages</text>
+<clipPath id="bar"><rect x="25" y="54" width="950" height="10" rx="5"/></clipPath>
+<g clip-path="url(#bar)"><rect x="25.00" y="54" width="567.49" height="10" fill="#f1e05a"/><rect x="592.49" y="54" width="330.36" height="10" fill="#e34c26"/><rect x="922.85" y="54" width="52.15" height="10" fill="#663399"/></g>
+<circle cx="31" cy="87" r="6" fill="#f1e05a"/>
+<text x="43" y="92" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">JavaScript <tspan fill="#7f88b0">59.7%</tspan></text>
+<circle cx="268.5" cy="87" r="6" fill="#e34c26"/>
+<text x="280.5" y="92" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">HTML <tspan fill="#7f88b0">34.8%</tspan></text>
+<circle cx="506" cy="87" r="6" fill="#663399"/>
+<text x="518" y="92" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">CSS <tspan fill="#7f88b0">5.5%</tspan></text>
+</svg>
