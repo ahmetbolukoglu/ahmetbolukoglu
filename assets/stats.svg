@@ -3,20 +3,20 @@
 <rect x="0.5" y="0.5" width="494" height="221" rx="10" fill="#1a1b27" stroke="#2a2d3e"/>
 <text x="25" y="36" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#70a5fd">GitHub stats</text>
 <circle cx="31" cy="67" r="4" fill="#00b4d8"/>
-<text x="45" y="72" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Total stars</text>
-<text x="470" y="72" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">9</text>
+<text x="45" y="72" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Total commits</text>
+<text x="470" y="72" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">1,016</text>
 <circle cx="31" cy="92" r="4" fill="#00b4d8"/>
-<text x="45" y="97" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Total commits</text>
-<text x="470" y="97" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">1,016</text>
+<text x="45" y="97" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Contributions in 2026</text>
+<text x="470" y="97" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">908</text>
 <circle cx="31" cy="117" r="4" fill="#00b4d8"/>
-<text x="45" y="122" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Pull requests</text>
-<text x="470" y="122" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">0</text>
+<text x="45" y="122" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Public repositories</text>
+<text x="470" y="122" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">26</text>
 <circle cx="31" cy="142" r="4" fill="#00b4d8"/>
-<text x="45" y="147" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Issues</text>
-<text x="470" y="147" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">0</text>
+<text x="45" y="147" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Total stars</text>
+<text x="470" y="147" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">9</text>
 <circle cx="31" cy="167" r="4" fill="#00b4d8"/>
-<text x="45" y="172" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Public repositories</text>
-<text x="470" y="172" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">7</text>
+<text x="45" y="172" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Years active on GitHub</text>
+<text x="470" y="172" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">8</text>
 <circle cx="31" cy="192" r="4" fill="#00b4d8"/>
 <text x="45" y="197" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#c0caf5">Followers</text>
 <text x="470" y="197" text-anchor="end" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="14" font-weight="700" fill="#c0caf5">2</text>
