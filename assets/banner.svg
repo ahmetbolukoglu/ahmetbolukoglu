@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="200" viewBox="0 0 1200 200" role="img" aria-label="Ahmet BÖLÜKOĞLU, Senior Software Engineer">
+<title>Ahmet BÖLÜKOĞLU, Senior Software Engineer</title>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#03142b"/>
+    <stop offset="1" stop-color="#00b4d8"/>
+  </linearGradient>
+</defs>
+<path d="M0 0H1200V140C1050 185 900 110 750 140S450 195 300 150S90 120 0 150Z" fill="url(#g)"/>
+<path d="M0 165C140 140 260 190 420 168S700 130 860 162S1080 190 1200 160V200H0Z" fill="url(#g)" opacity="0.35"/>
+<text x="600" y="88" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="700" fill="#d8f3ff">Ahmet BÖLÜKOĞLU</text>
+<text x="600" y="126" text-anchor="middle" font-family="'Segoe UI', Ubuntu, 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#d8f3ff" opacity="0.9">Senior Software Engineer · Backend &amp; Microservices</text>
+</svg>
