@@ -78,11 +78,12 @@ export function bannerSvg() {
 // ---------------------------------------------------------------- tech stack
 
 const STACK = [
-  ['Backend', ['.NET Core', 'C#', 'ASP.NET Web API', 'Microservices', 'gRPC / RPC', 'FastEndpoints', 'Event Bus (Pub/Sub)', 'Node.js', 'Python']],
-  ['Data & performance', ['SQL Server', 'PostgreSQL', 'Redis', 'Entity Framework', 'Dapper', 'Supabase', 'Amazon S3']],
-  ['DevOps & observability', ['Azure DevOps', 'GitHub Actions', 'Docker', 'Git', 'Grafana', 'Prometheus', 'k6']],
-  ['Frontend', ['TypeScript', 'JavaScript', 'React', 'Angular', 'Blazor', 'HTML5 Canvas']],
-  ['AI-assisted development', ['Claude Code', 'MCP', 'Cursor', 'GitHub Copilot', 'Prompt engineering']],
+  ['Backend', ['.NET Core', 'C#', 'ASP.NET Web API', 'Microservices', 'gRPC / RPC', 'FastEndpoints', 'Event Bus (Pub/Sub)', 'Node.js', 'Python', 'MQTT']],
+  ['Data & cloud', ['SQL Server', 'PostgreSQL', 'Redis', 'Entity Framework', 'Dapper', 'Supabase', 'Edge Functions', 'Amazon S3', 'Vercel', 'Firebase Hosting']],
+  ['Game development', ['Godot 4', 'GDScript', 'Unity', 'PixiJS', 'Three.js', 'React Three Fiber', 'HTML5 Canvas', 'Custom shaders', 'Steamworks', 'Blender Python API', 'Howler.js', 'Localization (i18n)']],
+  ['DevOps & quality', ['Azure DevOps', 'GitHub Actions', 'Docker', 'Git', 'Grafana', 'Prometheus', 'k6', 'Vitest', 'ESLint', 'Husky']],
+  ['Frontend & desktop', ['TypeScript', 'JavaScript', 'React', 'Next.js', 'Angular', 'Blazor', 'Vite', 'Zustand', 'Tailwind CSS', 'Electron']],
+  ['AI-assisted development', ['Claude Code', 'Google Antigravity', 'Cursor', 'GitHub Copilot', 'MCP', 'Gemini API', 'llama.cpp (local LLMs)', 'Playwright', 'Prompt engineering']],
 ]
 
 export function techStackSvg() {
@@ -259,8 +260,7 @@ const range = (s) => (s.length ? `${shortDate(s.start)} – ${shortDate(s.end)}`
 
 // ---------------------------------------------------------------- stat cards
 
-export function statsSvg(s) {
-  const width = 495
+function statsBody(s, ox = 0, width = 495) {
   // Show the first six figures that are not zero, so the card never
   // advertises empty numbers; the card keeps a fixed height either way.
   const rows = [
@@ -273,21 +273,20 @@ export function statsSvg(s) {
     ['Years active on GitHub', s.activeYears],
     ['Followers', s.followers],
   ].filter(([, value]) => Number(value) > 0).slice(0, 6)
-  const body = [`<text x="25" y="36" font-family="${FONT}" font-size="18" font-weight="700" fill="${THEME.title}">GitHub stats</text>`]
+  const body = [`<text x="${ox + 25}" y="36" font-family="${FONT}" font-size="18" font-weight="700" fill="${THEME.title}">GitHub stats</text>`]
   rows.forEach(([label, value], i) => {
     const y = 72 + i * 25
-    body.push(`<circle cx="31" cy="${y - 5}" r="4" fill="${THEME.accent}"/>`)
-    body.push(`<text x="45" y="${y}" font-family="${FONT}" font-size="14" fill="${THEME.text}">${esc(label)}</text>`)
-    body.push(`<text x="${width - 25}" y="${y}" text-anchor="end" font-family="${FONT}" font-size="14" font-weight="700" fill="${THEME.text}">${fmt(value)}</text>`)
+    body.push(`<circle cx="${ox + 31}" cy="${y - 5}" r="4" fill="${THEME.accent}"/>`)
+    body.push(`<text x="${ox + 45}" y="${y}" font-family="${FONT}" font-size="14" fill="${THEME.text}">${esc(label)}</text>`)
+    body.push(`<text x="${ox + width - 25}" y="${y}" text-anchor="end" font-family="${FONT}" font-size="14" font-weight="700" fill="${THEME.text}">${fmt(value)}</text>`)
   })
-  return card(width, STAT_CARD_HEIGHT, body.join('\n'), `GitHub stats for ${s.login}`)
+  return body.join('\n')
 }
 
 const STAT_CARD_HEIGHT = 72 + 6 * 25
 
-export function streakSvg(s, today) {
-  const width = 495
-  const height = STAT_CARD_HEIGHT // same height as the stats card next to it
+function streakBody(s, today, ox = 0, width = 495) {
+  const height = STAT_CARD_HEIGHT
   const { current, longest } = computeStreaks(s.days, today)
   const col = width / 3
   const block = (x, value, label, sub, color) => [
@@ -296,14 +295,26 @@ export function streakSvg(s, today) {
     `<text x="${x}" y="174" text-anchor="middle" font-family="${FONT}" font-size="11" fill="${THEME.muted}">${esc(sub)}</text>`,
   ].join('\n')
   const body = [
-    block(col / 2, s.totalContributions, 'Total contributions', `Since ${s.firstYear}`, THEME.title),
-    `<line x1="${col}" y1="40" x2="${col}" y2="${height - 40}" stroke="${THEME.border}"/>`,
-    `<circle cx="${col * 1.5}" cy="88" r="34" fill="none" stroke="${THEME.accent2}" stroke-width="4"/>`,
-    block(col * 1.5, current.length, 'Current streak', range(current), THEME.accent2),
-    `<line x1="${col * 2}" y1="40" x2="${col * 2}" y2="${height - 40}" stroke="${THEME.border}"/>`,
-    block(col * 2.5, longest.length, 'Longest streak', range(longest), THEME.title),
+    block(ox + col / 2, s.totalContributions, 'Total contributions', `Since ${s.firstYear}`, THEME.title),
+    `<line x1="${ox + col}" y1="40" x2="${ox + col}" y2="${height - 40}" stroke="${THEME.border}"/>`,
+    `<circle cx="${ox + col * 1.5}" cy="88" r="34" fill="none" stroke="${THEME.accent2}" stroke-width="4"/>`,
+    block(ox + col * 1.5, current.length, 'Current streak', range(current), THEME.accent2),
+    `<line x1="${ox + col * 2}" y1="40" x2="${ox + col * 2}" y2="${height - 40}" stroke="${THEME.border}"/>`,
+    block(ox + col * 2.5, longest.length, 'Longest streak', range(longest), THEME.title),
   ]
-  return card(width, height, body.join('\n'), `Contribution streak for ${s.login}`)
+  return body.join('\n')
+}
+
+// Stats and streak in one 1000px card, so it lines up with the other full-width cards.
+export function overviewSvg(s, today) {
+  const width = 1000
+  const half = width / 2
+  const body = [
+    statsBody(s, 0, half),
+    `<line x1="${half}" y1="24" x2="${half}" y2="${STAT_CARD_HEIGHT - 24}" stroke="${THEME.border}"/>`,
+    streakBody(s, today, half, half),
+  ]
+  return card(width, STAT_CARD_HEIGHT, body.join('\n'), `GitHub stats and contribution streak for ${s.login}`)
 }
 
 export function languagesSvg(s, count = 10) {
@@ -393,8 +404,7 @@ async function main() {
       if (!token) throw new Error('GITHUB_TOKEN is required for stats')
       stats = await fetchStats(LOGIN, token)
     }
-    write('stats.svg', statsSvg(stats))
-    write('streak.svg', streakSvg(stats, mock ? '2026-10-31' : undefined))
+    write('overview.svg', overviewSvg(stats, mock ? '2026-10-31' : undefined))
     write('languages.svg', languagesSvg(stats))
   }
 }
