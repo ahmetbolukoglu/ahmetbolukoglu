@@ -12,13 +12,6 @@ I build backend systems that stay fast under load. Most of my career has been in
 
 Outside my day job I build **games** with Godot, Unity and web engines (PixiJS, Three.js), including custom shaders, Steamworks integration and Blender Python pipelines for assets. I work daily with **AI-assisted development** tools (Claude Code, Google Antigravity, Cursor) and **MCP** integrations.
 
-## 🛠️ What I have worked on
-
-- **Real-time energy telemetry (EnerjiSA, solar power plant):** reporting on live production data collected from inverters and meters; fixed slow screens by adding Redis caching; monitoring and load testing with Grafana, Prometheus and k6.
-- **Fintech microservices (Agrio Finans, QPay):** migrated services from gRPC to RPC, built APIs with FastEndpoints, event-driven flows over an Event Bus (Pub/Sub), PostgreSQL, Amazon S3 file uploads and Redis caching.
-- **E-invoicing and pre-accounting SaaS (Ovinot):** worked on every module from the first version (pre-accounting, e-invoice, e-archive, e-SMM, online payments), first as an engineer and later as **team lead**.
-- **Banking (Akbank, Intertech):** rewrote a corporate banking application in ASP.NET MVC 5 and TypeScript in a 6-person Scrum team; built and supported bill payment services for ATMs across Turkey.
-
 ## 🧰 Tech stack
 
 <img src="assets/tech-stack.svg" width="100%" alt="Tech stack. Backend: .NET Core, C#, ASP.NET Web API, microservices, gRPC, FastEndpoints, Event Bus, Node.js, Python, MQTT. Data and cloud: SQL Server, PostgreSQL, Redis, Entity Framework, Dapper, Supabase, Edge Functions, Amazon S3, Vercel, Firebase Hosting. Game development: Godot 4, GDScript, Unity, PixiJS, Three.js, React Three Fiber, HTML5 Canvas, custom shaders, Steamworks, Blender Python API, Howler.js, localization. DevOps and quality: Azure DevOps, GitHub Actions, Docker, Git, Grafana, Prometheus, k6, Vitest, ESLint, Husky. Frontend and desktop: TypeScript, JavaScript, React, Next.js, Angular, Blazor, Vite, Zustand, Tailwind CSS, Electron. AI-assisted development: Claude Code, Google Antigravity, Cursor, GitHub Copilot, MCP, Gemini API, llama.cpp, Playwright, prompt engineering.">
