@@ -31,5 +31,3 @@ Outside my day job I build **games** with Godot, Unity and web engines (PixiJS, 
 
 <img src="assets/overview.svg" width="100%" alt="GitHub stats and contribution streak">
 <img src="assets/languages.svg" width="100%" alt="Most used languages">
-
-<sub>Cards are generated daily from live GitHub data by <a href=".github/workflows/profile-cards.yml">a GitHub Action</a> in this repository.</sub>
